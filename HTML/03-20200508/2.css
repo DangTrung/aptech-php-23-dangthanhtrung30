@@ -1,0 +1,21 @@
+.hopcha{
+    display: flex;
+    padding: 40px:
+}
+.hop1{
+    width: 30%;
+    padding: 40px;
+    background-color: chartreuse;
+}
+.hop2{
+    width: 70%;
+    padding: 40px;
+    background-color: rosybrown;
+}
+.cangiua{
+    text-align: center;
+}
+.mau{
+    background-color: gray;
+    padding: 40px;
+}
