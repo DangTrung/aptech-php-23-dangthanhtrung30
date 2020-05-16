@@ -1,0 +1,18 @@
+.Content {
+    &__Sign-Up-Button{
+        &--green-theme{
+            background-color: brown;
+        }
+        &--text-while{
+            color: chartreuse;
+        }
+        &--font-size{
+            font-size: 10px;
+        }
+    }
+}
+.Footer {
+    &--theme{
+        background-color: chocolate;
+    }
+}
