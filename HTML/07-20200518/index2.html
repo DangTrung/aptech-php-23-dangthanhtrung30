@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" bootrap.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class=" box">B</h1>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Checkout form</h1>
+                <p>
+                    Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex">
+            <div class="col-10 left">
+                <h1></h1>
+                <h1>Billing address</h1>
+                
+                <div class=" form-group">
+                    <form>
+                        <div class=" d-flex">
+                          <div class="col">
+                              <label for="f-name">First name</label>
+                            <input type="text" id="f-name" class="form-control" placeholder="First name">
+                          </div>
+                          <div class="col">
+                              <label for="l-name"> Last name</label>
+                            <input type="text" id="l-name" class="form-control" placeholder="Last name">
+                          </div>
+                        </div>
+                        <label for="Uer">Username</label>
+                        <input type="text" id="Uer" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                       <label for=" email">email</label>
+                       <input type=" email" id=" email" class=" form-control" placeholder="yours@email">
+                       <label for=" adress"> address1</label>
+                       <input type="text" id=" adress" class=" form-control" placeholder="youradd">
+                       <label for=" adress2"> address2</label>
+                       <input type="text" id=" adress2" class=" form-control" placeholder="youradd2">
+                       <label for="country">Country</label>
+                       <select name="country" id="country" class=" custom-select ">
+                           <option value=""> Choosen</option>
+                           <option> Vietnam</option>
+                       </select>
+                       <label for="state">State</label>
+                       <select name="state" id=" state" class=" custom-select">
+                           <option value>Choosen</option>
+                           <option> Hue</option>
+                       </select>
+                       <label for="zip">Zip</label>
+                       <input type="text " id="zip" class=" form-control">
+                    </form>
+                    <hr>
+                    <input type=" checkbox" class=" custom-control-input custom-checkbox">
+                    <label for="">Shipping address is the same as my billing address</label>
+                    <input type=" checkbox" class=" custom-control-input custom-checkbox">
+                    <label for="">Save this information for next time</label>
+                    <hr>
+                    <h3>payment</h3>
+                    <div class=" custom-control custom-radio" >
+                        <input type="radio" class=" custom-control-input" id="Credit" name="paymentmethod">
+                        <label for="Credit" class=" custom-control-label">Credit card</label>
+                    </div>
+                    <div class=" custom-control custom-radio" >
+
+                        <input type="radio" class=" custom-control-input">
+                        <label for=""  class=" custom-control-label">Debit card</label>
+                    </div>
+                     <div class=" custom-control custom-radio" >
+                        <input type="radio" class=" custom-control-input">
+                        <label for="" class="  custom-control-label">PayPal</label>
+                    </div>
+                    
+
+                </div>
+                 </div>
+            </div>
+            <div class="col-2">
+                <ul class=" list-group">
+                    <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                        <h5>Product name</h5>
+
+                        <span class=" text-muted"> 12$</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
