@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        th,td{
+            border: black solid 1px;
+        }
+
+    </style>
+    <script>
+        function myFunction(){
+            var btn= document.createElement('BUTTON');
+            btn.innerHTML= "CLICK ME";
+            document.body.appendChild(btn);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>stt </th>
+                <th>Ten</th>
+                <th>damge</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="tr">
+                <td>01</td>
+                <td id="01" ></td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td id="02">Traxec</td>
+                <td>121</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td id="03"></td>     
+                <td>156</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick=" myFunction()">CLICK</button>
+    <button onclick=" themtuong()">Them</button>
+    <button onclick="add()">ADD</button>
+</body>
+</html>
