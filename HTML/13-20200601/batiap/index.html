@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="demo"></div>
+        <table>
+            <thead id="t-head"></thead>
+            <tbody id="t-body"></tbody>
+        </table>
+        <button id="nutAn">Click toi di</button>
+
+        <script>
+            $(document).ready(function(){
+                $('#nutAn').click( function(){
+                    $.get('https://namcoi.com/du-an/aptech-php-laravel-crud-user/public/api/users',function(data, status){
+                        for( var i=0; i< data.users.length; i++)
+                        {
+                            var user = data.users[i];
+                            var tr = document.createElement('tr');
+                            var keyArray = ["id","name","email"];
+                            for( var j=0; j< keyArray.length; i++)
+                            {
+                                var value = user[keyArray[j]];
+                                var td = document.createElement('td');
+                                td.innerHTML = value;
+                                tr.appendChild(td);
+
+                            }
+                            $('#t-body').append(tr);
+                        }
+                    });
+                } );
+            });
+     /*      function update() {
+                var tableHead = document.getElementById('t-head');
+                var tableBody = document.getElementById('t-body');
+                var users = data.users;
+                var getDate = Object.keys(users[0])
+            } */
+        </script>
+
+    </body>
+</html>
