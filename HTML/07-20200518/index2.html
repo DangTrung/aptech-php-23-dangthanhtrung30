@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container d-flex justify-content-center align-items-center">
         <div class="row">
             <div class="col-12">
                 <h1 class=" box">B</h1>
@@ -25,10 +25,10 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="d-flex">
-            <div class="col-10 left">
+    <div class="container-fluid">
+        <div class="row d-flex">
+            
+            <div class="col-8 float-left">
                 <h1></h1>
                 <h1>Billing address</h1>
                 
@@ -66,10 +66,15 @@
                        <input type="text " id="zip" class=" form-control">
                     </form>
                     <hr>
-                    <input type=" checkbox" class=" custom-control-input custom-checkbox">
-                    <label for="">Shipping address is the same as my billing address</label>
-                    <input type=" checkbox" class=" custom-control-input custom-checkbox">
-                    <label for="">Save this information for next time</label>
+                    <form action="" class=" d-block">
+                        <div class="form-check d-block float-left">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Shipping address is the same as my billing address</label>
+                            <br>
+                            <input type="checkbox" name="" id="02" class=" form-check-input">
+                            <label for="02" class=" form-check-label"> Save this information for next time</label>
+                          </div>
+                   </form>
                     <hr>
                     <h3>payment</h3>
                     <div class=" custom-control custom-radio" >
@@ -89,16 +94,54 @@
 
                 </div>
                  </div>
-            </div>
-            <div class="col-2">
-                <ul class=" list-group">
-                    <li class=" list-group-item d-flex  justify-content-between align align-items-center">
-                        <h5>Product name</h5>
+             <div class="col-4 float-right">
 
-                        <span class=" text-muted"> 12$</span>
-                    </li>
-                </ul>
-            </div>
+                <div class=" d-flex justify-content-between">
+                    <h3>Your Cart</h3>
+                    <h3 class=" bg-dark rounded m-2 text-warning pl-2 pr-2" >3</h3>
+                    </div>
+
+                    <ul class=" list-group  ">
+                        <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                            <div>
+                                <h5>Product name</h5>
+                                <p class="Text-mute ">Brief description</p>
+                            </div>
+                          <span class=" text-muted"> 12$</span>
+                        </li>
+                        <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                            <div>
+                                <h6>Second Product</h6>
+                                <p>Brief decription </p>
+                            </div>
+                            <span>$8</span>
+    
+                        </li>
+                        <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                            <div> 
+                                <h6>Third Item</h6>
+                                <p>Brief dictionary</p>
+                            </div>
+                            <span>$5</span>
+                        </li>
+                        <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                            <div>
+                                <h6>Promote Code</h6>
+                                <p>EXAMPLECODE</p>
+                                
+                            </div>
+                            <span>-5$</span>
+                        </li>
+                        <li class=" list-group-item d-flex  justify-content-between align align-items-center">
+                            <div> 
+                                <h6> Total</h6>
+                             </div>
+                             <p>$20</p>
+                        </li>
+                    </ul>
+                </div>
+           
+            
         </div>
         </div>
     </div>

@@ -1,0 +1,48 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+container{
+    height: 100%;
+    margin: auto;
+}
+.img{
+    margin-top: 2px;
+    background-image: url(./Lake-Ysyk-body-water-Kyrgyzstan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 340px;
+    width: 100%;
+}
+.img-1
+{
+    background-image: url(./close-up-vintage-camera-wooden-table_1205-111.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px ;
+}
+.img-2{
+    background-image: url(./magazines-table-notebook-laptop.jpg);
+    height: 300px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-3{
+    background-image: url(./0_kBHpKva09AsGj7RQ.jpg);
+    height: 300px;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-4{
+    background-image: url(./Lake-Ysyk-body-water-Kyrgyzstan.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+}
