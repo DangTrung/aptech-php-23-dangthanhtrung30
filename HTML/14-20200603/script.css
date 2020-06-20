@@ -55,3 +55,8 @@ container{
      background-repeat: no-repeat;
 
  }
+ @media (max-width:768px){
+     .d-md-block-max{
+         display: block;
+     }
+ }

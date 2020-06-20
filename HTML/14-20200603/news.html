@@ -12,24 +12,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <ul class=" list-unstyled justify-content-between d-flex align-items-center">
-                    <
-                    <li>HOME</li>
-                    <li> HTML</li>
-                    <li>CSS</li>
-                    <li> JS</li>
-                    <li>PHP</li>
-                    <li>CONTACT</li>
-                    >
-                </ul>
-                <hr>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class=" col-12 d-flex justify-content-between align-items-center">
+                    <div class="d-none d-md-block">
+                        <button class=" btn btn-outline-danger text-danger">SIGN UP NOW</button>
+                    </div>
+                     <h1 class=" text-primary">NEWS</h1>
+                   
+                    <div>
+                        
+                            <button id="bar" class="btn btn-outline-success d-md-none">
+                                <i class="fas fa-bars"></i>
+                                <script src="./script.js"></script>
+                           </button>
+                            
+                        
+                        <div class=" d-none d-md-block">
+                            <i class="fas fa-search"></i>   
+                        <button class=" btn btn-outline-primary"> SIGN IN</button>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="row d-none d-md-block" id="nav">
+                <div class="col-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div id ="carousel-item" class="carousel-item  d-flex justify-content-center">
+                              <div class="col-9">
+                                <ul id="ul" class=" list-unstyled d-flex justify-content-between mb-0">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">HTML</a></li>
+                                    <li><a href="">CSS</a></li>
+                                    <li><a href="">JavaScript</a></li>
+                                    <li><a href="">PHP</a></li>
+                                    <li><a href="">React JS</a></li>
+                                    <li><a href="">Laravel</a></li>
+                                </ul>
+                              </div>
+    
+                          </div>
+                        </div>
+                        <a id="prev" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="text-dark " ><i class="fas fa-arrow-left"></i></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a id="next" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="text-dark" ><i class="fas fa-arrow-right"></i></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
+    </header>
+      
     <div class="container">
         <div class="row m-0">
             <div class="col-md-8 col-sm-6 d-flex">
@@ -86,8 +129,9 @@
                 </ul>
             </div>
         </div>
+        <hr>
     </div>
-    <hr>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-12">
@@ -109,27 +153,27 @@
                         <div class="card-footer text-muted">Lastest updated 3m ago</div>
                     </div>
                 </div>
-                <div class=" d-flex">
-                    <div class="card">
-                        <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
-                        <div class="card-body">
+                
+               <div class="d-md-block d-none">
+                  <div class=" d-flex">
+                   <div class="card">
+                      <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
+                      <div class="card-body">
                             <h5 class=" card-title"> Title</h5>
-                            <p class=" text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reiciendis nemo dolorum beatae dolore dolores error atque cupiditate qui expedita perferendis impedit quod illo, modi ipsam dicta at architecto eius.</p>
-                        </div>
-                        <div class="card-footer text-muted">Lastest updated 3m ago</div>
+                        <p class=" text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reiciendis nemo dolorum beatae dolore dolores error atque cupiditate qui expedita perferendis impedit quod illo, modi ipsam dicta at architecto eius.</p>
                     </div>
-                    <div class="card">
-                        <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
-                        <div class="card-body">
-                            <h5 class=" card-title"> Title</h5>
-                            <p class=" text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reiciendis nemo dolorum beatae dolore dolores error atque cupiditate qui expedita perferendis impedit quod illo, modi ipsam dicta at architecto eius.</p>
-                        </div>
-                        <div class="card-footer text-muted">Lastest updated 3m ago</div>
-                    </div>
+                    <div class="card-footer text-muted">Lastest updated 3m ago</div>
                 </div>
-                
-                
-
+                <div class="card">
+                    <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
+                    <div class="card-body">
+                        <h5 class=" card-title"> Title</h5>
+                        <p class=" text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reiciendis nemo dolorum beatae dolore dolores error atque cupiditate qui expedita perferendis impedit quod illo, modi ipsam dicta at architecto eius.</p>
+                    </div>
+                    <div class="card-footer text-muted">Lastest updated 3m ago</div>
+                </div>
+            </div>
+               </div>
             </div>
             <div class="col-4 d-none d-md-block">
                 <div class="card h-100">
@@ -141,10 +185,11 @@
                     <div class="card-footer text-muted">Lastest updated 3m ago</div>
                 </div>
             </div>
+        </div>
+        <hr>
             
         </div>
-    </div>
-    <hr>
+
     <div class="container">
         <div class="row">
             <div class="col-4 d-none d-md-block">
@@ -159,7 +204,7 @@
             </div>
             <div class="col-md-8 col-sm-12">
                 <div class="d-flex">
-                    <div class="card">
+                    <div class="card m-1">
                         <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
                         <div class="card-body">
                             <h5 class=" card-title"> Title</h5>
@@ -167,7 +212,7 @@
                         </div>
                         <div class="card-footer text-muted">Lastest updated 3m ago</div>
                     </div>
-                    <div class="card">
+                    <div class="card m-1">
                         <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
                         <div class="card-body">
                             <h5 class=" card-title"> Title</h5>
@@ -176,8 +221,9 @@
                         <div class="card-footer text-muted">Lastest updated 3m ago</div>
                     </div>
                 </div>
-                <div class=" d-flex">
-                    <div class="card">
+                <div class="d-md-block d-none">
+                    <div class=" d-flex">
+                    <div class="card m-1">
                         <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
                         <div class="card-body">
                             <h5 class=" card-title"> Title</h5>
@@ -185,7 +231,7 @@
                         </div>
                         <div class="card-footer text-muted">Lastest updated 3m ago</div>
                     </div>
-                    <div class="card">
+                    <div class="card m-1">
                         <img src="./Lake-Ysyk-body-water-Kyrgyzstan.jpg" alt="" class=" card-img-top">
                         <div class="card-body">
                             <h5 class=" card-title"> Title</h5>
@@ -193,6 +239,7 @@
                         </div>
                         <div class="card-footer text-muted">Lastest updated 3m ago</div>
                     </div>
+                </div>
                 </div>
                 
                 
@@ -202,5 +249,40 @@
             
         </div>
     </div>
+    <hr>
+    <footer>
+        <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h5>HỆ THỐNG ĐÀO TẠO CNTT QUỐC TẾ SOFTECH APTECH</h5>
+                <p>Địa Chỉ: Tòa Nhà VNPT, 38 Yên Bái,Quận Hải Châu, Thành Phố Đà Nẵng. </p>
+                <p>Điện Thoại: 0236.3.779.779- fax:0236.3.779.555</p>
+                <p>Email:tuyensinh@softech.vn</p>
+                <div><img src="1.jpg" alt="" style="width: 350px;height: 100px;" class=" img-thumbnail"></div>
+                
+                <span class=" text-muted">&copy; AptechPHP-2018</span>
+            </div>
+            <div class="col-4 d-flex justify-content-between">
+                <ul class=" list-unstyled ">
+                    <li><h3> Nagivation</h3></li>
+                    <li>HOME</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>CONTACT</li>
+                </ul>
+                
+                <ul class="d-md-block d-none list-unstyled ">
+                    <li><h3> About</h3></li>
+                    <li>Team</li>
+                    <li>Location</li>
+                    <li>Primary</li>
+                    <li>Terms</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
