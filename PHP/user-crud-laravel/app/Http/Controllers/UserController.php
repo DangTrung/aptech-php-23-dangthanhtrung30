@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class UserController extends Controller
@@ -14,11 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(10);
-        return view(
-            'users.index',
-            ['users'=>$users]
-        );
+        $users = DB::tabble('users')->get();
+        return view('users.index',
+       ['users'=>$users] );
     }
 
     /**
