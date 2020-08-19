@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use update;
 
 class UserController extends Controller
 {
@@ -14,8 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users= User::all();
-        return view('users.index',['users'=>$users]);
+        $users = User::paginate(10);
+        return view(
+            'users.index',
+            ['users' => $users]
+        );
     }
 
     /**
@@ -25,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -36,7 +40,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'name'=> $request->name,
+            'email'=>$request->email,
+            'password'=>$request->password
+        ]);
+        return redirect()->route('users.index');    
     }
 
     /**
@@ -47,8 +56,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-        return view('users.show',['user'=>$user]);
+        $date = User::find($id);
+        return view('users.show',['user'=>$date]);
     }
 
     /**
@@ -59,7 +68,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+       $users= User::find($id);
+        return view('users.edit',['user'=>$users]);
     }
 
     /**
@@ -69,9 +79,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $date = $request->all();
+        $user-> update($date);
+        return redirect()->route('users.index');
     }
 
     /**
@@ -82,6 +94,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+       User::destroy($id);
+       return redirect()->route('users.index');
     }
 }

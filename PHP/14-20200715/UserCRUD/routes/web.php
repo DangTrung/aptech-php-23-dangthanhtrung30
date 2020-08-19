@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::resource('/users','UserController');
+Route::resource('/users','UserController');
 // Route::get('users','UserController@index ')->name('users.index'); 
 // Route::post('users ','UserController@store ')->name('users.store');
 // Route::get('users/create ','UserController@create')->name('users.create');

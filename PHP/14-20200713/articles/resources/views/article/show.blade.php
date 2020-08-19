@@ -8,16 +8,19 @@ show page
     <div class="col-12">
       <table class="table table-hover table-bordered">
         <thead class="">
-        <tr class="text-center">
-            <th scope="col" class="">id</th>
+          <tr class="text-center">
+            <th scope="col" class="">ID</th>
             <th scope="col" class="">Title</th>
             <th scope="col" class="">Slug</th>
-            <th scope="col" class="">descrition</th>
+            <th scope="col" class="">description</th>
             <th scope="col" class="">Content</th>
+            <th scope="col" class="">Created Date</th>
+            <th scope="col" class="">Updated Date</th>
+            
           </tr>
         </thead>
         <tbody>
-          <tr class="text-center">
+          <tr >
             <th scope="row">{{$article->id}}</th>
             <td>{{$article->title}}</td>
             <td>{{$article->slug}}</td>

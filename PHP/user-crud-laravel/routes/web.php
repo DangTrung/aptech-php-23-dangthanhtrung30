@@ -11,7 +11,10 @@
 |
 */
 
+use App\Http\Controllers\PhoneController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('users','UserController');
+Route::resource('phones','PhoneController');

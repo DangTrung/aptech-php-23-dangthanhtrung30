@@ -27,7 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('article/create ');
+        return view('article/create');
     }
 
     /**
@@ -42,10 +42,18 @@ class ArticleController extends Controller
         $art->title = $request->title;
         $art->description = $request->description;
         $art->content=$request->content; */
-        $title = $request->title;
+     /*   $title = $request->title;
         $slug = Str::slug($title, '-');
         $description = $request->description;
-        $content = $request->content;
+        $content = $request->content;*/
+        Article::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'slug' =>Str::slug('title','-'),
+            'content' => $request->content
+        ]);
+
+        return redirect()->route('articles.index');
 
     }
 
@@ -57,8 +65,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        $article = Article::find($article);
-        return view('article.show',['article'=>$article]);
+        return view('article.show', ['article' => $article]);
     }
 
     /**
@@ -69,7 +76,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        
+        return view('article.edit',['article'=>$article]);
     }
 
     /**
@@ -79,11 +86,16 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $id)
+    public function update(Request $request, Article $article)
     {
-        $article= Article::find($id);
-        $article->title=$request->title;
-        $article->save();
+        
+        $data = $request->all();
+        $data['slug'] =  Str::slug($request->title,'-');
+        // dd($data);
+
+        $article->update($data);
+        
+
         return redirect()->route('article.index');
 
     }
@@ -94,10 +106,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $id)
+    public function destroy( $id)
     {
         $article = Article::find($id);
-        $article->delete();
-        return redirect()->route('articles.index');redirect()->route('articles.index');
+        $article->destroy($id);
+        // Article::destroy($id);
+        return redirect()->route('article.index');
     }
 }

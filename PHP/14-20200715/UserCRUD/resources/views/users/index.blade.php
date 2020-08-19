@@ -1,48 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div style="display: flex; justify-content:space-between;">
-        <button>Sign in</button>
-        <h1>Laravel CRUD Project</h1>
-        <a href="">Home</a>
-    </div>
-    <table style="border-style:solid ">
-        <thead style="border-style:solid">
-       <tr style="border-style:solid">
-       <th style="border-style:solid">ID</th>
-        <th style="border-style:solid">Name</th>
-        <th style="border-style:solid">Email</th>
-        <th style="border-style:solid">Password</th>
-        <th style="border-style:solid">Action</th>
-        </tr>
+@extends('layout.master')
+@section('content')
+@component('layout.components.title')
+index page
+@endcomponent
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr class="text-center">
+            <th scope="col" class="">#</th>
+            <th scope="col" class="">Name</th>
+            <th scope="col" class="">Email</th>
+            <th scope="col" class="">Action</th>
+          </tr>
         </thead>
-        <tbody style="border-style:solid">
-            @foreach($users as $user)
-            <tr style="border-style:solid">
-                <td>{{$user->id}}</td>
-                <td>{{$user->name}}</td>
-                <td>{{$user->email}}</td>
-                <td>{{$user->password}}</td>
-                <td> 
-                    <form action="{{route('users.show',$user->id)}}" method="GET">
-                        <button>Show</button>
-                    </form>
-                    <form action="{{route('users.edit',$user->id)}}" method="GET">
-                        <button>Edit</button>
-                    </form>
-                    <form action="{{route('users.destroy',$user->id)}}" method="POST">
-                        <button>Delete</button>
-                    </form> 
+        <tbody>
+          @foreach($users as $user)
+          <tr class="text-center">
+            <th scope="row">{{$user->id}}</th>
+            <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
+            <td class="d-flex align-items-center justify-content-around">
+              <form action="{{route('users.show',$user->id)}}" method="get">
+                <button class="btn btn-sm btn-primary rounded-0">
+                  Show
+                </button>
+              </form>
+              <form action="{{route('users.edit',$user->id)}}" method="get">
+                <button class="btn btn-sm btn-warning rounded-0">
+                  Edit
+                </button>
+              </form>
+              <form action="{{route('users.destroy',$user->id)}}" method="post">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" name="_method" value="delete">
+                <button class="btn btn-sm btn-danger rounded-0">
+                  Delete
+                </button>
+              </form>
             </td>
-          </tr></td>
-            </tr>
-            @endforeach
+          </tr>
+          @endforeach
         </tbody>
-    </table>
-</body>
-</html>
+      </table>
+       <div class="d-flex justify-content-center">{{$users->links()}}</div>
+    </div>
+  </div>
+</div>
+@endsection

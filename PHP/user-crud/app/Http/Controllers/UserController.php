@@ -19,7 +19,6 @@ class UserController extends Controller
       $user = User::find($user);
       return view('users.show',['users'=>$user]);
   }
-  public function 
-}
+
 
 

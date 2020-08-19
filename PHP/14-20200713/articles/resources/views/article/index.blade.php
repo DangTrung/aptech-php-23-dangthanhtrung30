@@ -9,7 +9,7 @@ index page
       <table class="table table-hover table-bordered">
         <thead>
           <tr class="text-center">
-            <th scope="col" class="">id</th>
+            <th scope="col" class="">STT</th>
             <th scope="col" class="">Title</th>
             <th scope="col" class="">Slug</th>
             <th scope="col" class="">descrition</th>
@@ -17,9 +17,9 @@ index page
           </tr>
         </thead>
         <tbody>
-          @foreach($article as $a)
+          @foreach($article as $key=> $a)
           <tr class="text-center">
-            <th scope="row">{{$a->id}}</th>
+            <th scope="row">{{ $key+1}}</th>
             <td>{{$a->title}}</td>
             <td>{{$a->slug}}</td>
             <td>{{$a->description}}</td>

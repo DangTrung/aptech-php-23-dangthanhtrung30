@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\User;
+use App\Phone;
 
 class UserController extends Controller
 {
@@ -15,9 +16,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = DB::tabble('users')->get();
-        return view('users.index',
-       ['users'=>$users] );
+        $user=User::paginate(10);
+        //dd($user[1]);
+        return view('users.index',['users'=>$user] );
     }
 
     /**
@@ -27,7 +28,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users/create');
     }
 
     /**
@@ -38,7 +39,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $date = $request->all();
+        User::create($date);
+        return redirect()->route('users.index');
+
     }
 
     /**
@@ -47,9 +51,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show(User $user)
+    {   
+        $date= Phone::find($user);
+    
+        return view('users.show',compact('user','date'));
     }
 
     /**
@@ -60,7 +66,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+       $user= User::find($id);
+       return view('users.edit',['user'=>$user]);
+
     }
 
     /**
@@ -70,9 +78,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $date = $request->all();
+        $user->update($date);
     }
 
     /**
@@ -83,6 +92,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect()->route('users.index');
     }
 }
